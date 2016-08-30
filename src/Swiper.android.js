@@ -286,7 +286,7 @@ export default React.createClass({
             marginBottom: 3,
           }} />;
     for(let i = 0; i < this.state.total; i++) {
-      dots.push(i === this.state.index
+      dots.push(i === this.state.index || i < this.state.index
         ?
         React.cloneElement(ActiveDot, {key: i})
         :
